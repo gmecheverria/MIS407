@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory and Condition</title>
+    <link href="static/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+  <h1>Inventory & Condition Form</h1>
+</header>
+<main>
+  <form action="/inventory_and_condition" method="POST">
+    Date Checked In:<input type="date" name="date_check_in" value="{{date}}"/>
+    Last Name: <input type="text" name="last_name" value="{{Lname}}" readonly/>
+    First Name: <input type="text" name="first_name" value="{{Fname}}" readonly />
+    Building Name: <input type="text" name="building_name" value="{{Bldg}}" readonly/>
+    <h2>Scale:</h2>
+    <p>1= Like New/Good Condition<br>2= Acceptable Condition<br>3= Needs Repair<br>4= Missing/Needs Replacement<br>5= N/A</p>
+    <table>
+      <tr>
+        <th>Location/Item</th>
+        <th>Condition</th>
+        <th>Comments/Reason</th>
+      </tr>
+      <tr>
+        <th colspan="3" style="float: left">General</th>
+      </tr>
+      <tr>
+        <td>Front Door</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Handle/Lock/Deadbolt</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Peephole</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>APT Plate# Outside Door</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Other</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <th colspan="3" style="float: left">Laundry Area</th>
+      </tr>
+      <tr>
+        <td>Flooring</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Walls/Ceiling</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Washer</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Frame/body</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Door</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Dryer</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Frame/body</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Lint Trap</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Door</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Washer/Dryer Controls</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Circuit Box</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Closet</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Door</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Shelves</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Rod</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Electrical Outlet</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Large Vent</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <th colspan="3" style="float: left">Bedroom</th>
+      </tr>
+      <tr>
+        <td>Flooring</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Walls/Ceiling</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Door(Front/Back)</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Stopper</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Handle/lock</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Window</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Frame</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Screen</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Handle/latches</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Mini Blinds</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Fixtures</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Electrical Outlets</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Cable/Ethernet Connection</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Vent</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Sprinkler</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Light Cover</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Smoke Detector</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Furniture</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Wardrobe</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Desk</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Dresser</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Bed</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <th colspan="3" style="float: left">Hallway</th>
+      </tr>
+      <tr>
+        <td>Flooring</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Walls/Ceiling</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Thermostat</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Sprinkler</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Electrical Outlets</td>
+      <td><input type="text" name="condition"></td>
+      <td><input type="text" name="comments"></td>
+    </tr>
+    <tr>
+      <th colspan="3" style="float: left">Kitchen</th>
+    </tr>
+    <tr>
+      <td>Flooring</td>
+      <td><input type="text" name="condition"></td>
+      <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Walls/Ceiling</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Sink</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Stove</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Oven</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Window</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Refrigerator/freezer</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Dishwasher</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Microwave</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Cabinets/Island</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Fixtures</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Sprinkler</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Vent</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Barstools</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Other</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <th colspan="3" style="float: left">Bathroom</th>
+      </tr>
+      <tr>
+        <td>Flooring</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Walls/Ceiling</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Door(Front/Back)</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Vanity(s)</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Mirror(s)</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Vanity Light(s)</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Sinks</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Small Towel Racks</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Toilet</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Shower</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Electrical Outlets</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Other</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <th colspan="3" style="float: left">Living Room</th>
+      </tr>
+      <tr>
+        <td>Flooring</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Walls/Ceiling</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Windows</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Cable/Ethernet Outlets</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Electrical Outlets</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Sprinkler</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Furniture</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Large Vent By Front Door</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+      <tr>
+        <td>Other</td>
+        <td><input type="text" name="condition"></td>
+        <td><input type="text" name="comments"></td>
+      </tr>
+    </table>
+    <ul>
+      <li>I accept the condition of this bedroom and apartment with the understanding that I will be charged for any damages that may occur to it or the items in it, during my stay. Cleaning charges will be billed separately.</li>
+      <li> IF I AM IN A TWO BEDROOM SHARED APARTMENT: I am using the lofted or bunk bed provided me by the Department of Residence and understand the following:</li>
+      <ul>
+        <li>That my failure to use the guardrail or ladder provided is dangerous, unsafe, and I ASSUME THE RISK of injury or death from such failure.</li>
+        <li>That I do hereby RELEASE, WAIVE, DISCHARGE, AND COVENANT NOT TO SUE Iowa State University, the Department of Residence; The Board of Regents, State of Iowa, or the State of Iowa, it’s officers, servants, agents or employees (hereinafter referred to as RELEASEES) for any liability, claim, and/or cause of action arising out of or related to any loss, damage, or injury, including death, that may be sustained by me, or to any property belonging to me arising out of use of loft or bunk bed while living in Frederiksen Court.</li>
+        <li>That this release shall be effective whether injury is caused by my negligence, the negligence of the RELEASEES, or the negligence of any third party.</li>
+      </ul>
+    </ul>
+    Signature: <input type="text" name="signature"/>
+    <br>
+    Date: <input type="date" name="date"/>
+  </form>
+</main>
+</body>
+</html>

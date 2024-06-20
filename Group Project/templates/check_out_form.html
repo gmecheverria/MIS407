@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Out</title>
+    <link href="static/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+    <h1>Check-Out Form</h1>
+</header>
+<main>
+    <form action="/check_out" method="POST">
+        <h2>Student Information</h2>
+        Last Name: <input type="text" name="last_name" value="{{Lname}}" readonly/>
+        First Name: <input type="text" name="first_name" value="{{Fname}}" readonly/>
+        Preferred Name <input type="text" name="preferred_name" value="{{Pname}}"/>
+        <br>
+        ISU ID#: <input type="text" name="student_id" value="{{StuID}}" readonly/>
+        ISU Email: <input type="email" name="student_email" value="{{Email}}" readonly/>
+        Phone Number: <input type="text" name="phone_number" value="{{Phone}}"/>
+        <h2>Dorm/Apartment Information</h2>
+        Building Name: <input type="text" name="building_name" value="{{Bldg}}" readonly/>
+        Dorm/Apt #: <input type="text" name="dormapt_number" value="{{Room}}" readonly/>
+        Bedroom: <input type="text" name="bedroom_number" value="{{Bdrm}}" readonly/>
+        <h2>Forwarding Address</h2>
+        Street Address: <input type="text" name="street_address" />
+        City: <input type="text" name="city" />
+        State: <input type="text" name="state" />
+        Zip: <input type="text" name="zip_code" />
+        <h2>Checkout Reason</h2>
+        <p>If your contract has not ended or you are not moving to other on-campus housing, by checking-out of this apartment, you are asking to cancel your contract. The housing contract you submitted is for the entire academic year – both fall and spring semesters. If you cancel, the Cancellation Penalty may apply. Please review the Terms and Conditions (available on the DOR website) for details</p>
+        <table>
+            <tr>
+                <th>DOR will verify</th>
+                <th>Requires documentation</th>
+                <th>If you remain enrolled, YOU WILL INCUR cancellation penalties</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" value="on">Contract or Conference ended<br>
+                    <input type="checkbox" value="on">Graduation<br>
+                    <input type="checkbox" value="in">Move to another apartment<br>
+                    <input type="checkbox" value="on">Bedroom switch within my apartment<br>
+                    <input type="checkbox" value="on">Move to other on-campus housing<br>
+                    <input type="checkbox" value="on">Withdraw, Dismissal, Transfer</td>
+                <td><input type="checkbox" value="on">Financial<br>
+                    <input type="checkbox" value="on">Medical<br>
+                    <input type="checkbox" value="on">Military<br>
+                    <input type="checkbox" value="on">Waiver</td>
+                <td><input type="checkbox" value="on">Move to Greek chapter house<br>
+                    <input type="checkbox" value="on">Move off-campus</td>
+            </tr>
+        </table>
+        <h2>Check-out Statement of Agreement</h2>
+        <ul>
+            <li>By signing this form, I am agreeing that I have read and understood all the information it contains.</li>
+            <li>I understand that I am required to complete a proper check-out as described on the DOR website. Failure to complete a proper checkout can result in continued accrual of fees for housing, dining, improper checkout, and / or lock changes.</li>
+            <li>I accept responsibility for the condition I leave my apartment in when I check out</li>
+            <li> I understand a final inspection and assessment of cleaning, repair, key, and lock charges will be completed AFTER I have checked out. I am aware I will be charged for any damages that need repaired, and missing furniture or disassembled furniture, and any necessary cleaning. I understand any charges assessed to me will be placed on my UBill. I will receive an email to my ISU email address once these charges have been assessed.</li>
+            <li>I am aware that if I am not moving to other on-campus housing, by checking-out of my assignment, I am asking that my contract be canceled. I understand that penalties may apply</li>
+        </ul>
+        Student Signature: <input type="text" name="student_signature" required/>
+        <br>
+        Date: <input type="date" name="date" required/>
+        <input type="submit" value="Check Out"/>
+    </form>
+</main>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check In</title>
+    <link href="static/style.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+    <h1>Check-In Form</h1>
+</header>
+<main>
+    <form action="/check_in" method="POST">
+        <h2>Student Information</h2>
+        Last Name: <input type="text" name="last_name" value="{{Lname}}" readonly/>
+        First Name: <input type="text" name="first_name" value="{{Fname}}" readonly/>
+        Preferred Name <input type="text" name="preferred_name" value="{{Pname}}"/>
+        <br>
+        ISU ID#: <input type="text" name="student_id" value="{{StuID}}" readonly/>
+        ISU Email: <input type="email" name="student_email" value="{{Email}}" readonly/>
+        Phone Number: <input type="text" name="phone_number" value="{{Phone}}"/>
+        <h2>Dorm/Apartment Information</h2>
+        Building Name: <input type="text" name="building_name" value="{{Bldg}}" readonly/>
+        Dorm/Apt #: <input type="text" name="dormapt_number" value="{{Room}}" readonly/>
+        Bedroom: <input type="text" name="bedroom_number" value="{{Bdrm}}" readonly/>
+        <h2>Pet Information</h2>
+        Do you have an approved pet? <input type="radio" name="yes" value="on" {{YesPet}} readonly> Yes
+        <input type="radio" name="no" value="on" {{NoPet}} readonly> No
+        <br>
+        Type of pet: <input type="checkbox" name="dog" value="on"> Dog
+        <input type="checkbox" name="cat" value="on"> Cat
+        <input type="checkbox" name="other" value="on"> Other(please specify):
+        <h2>Check-In Statement of Agreement</h2>
+        <ul>
+            <li>By signing below, I am stating that I have received the above keys for the building indicated</li>
+            <li>I am aware that I am not allowed to use a space I have not contracted for.</li>
+            <li>All room switches <b>must</b> be approved through the housing office of the building</li>
+            <li>I am aware that it is my responsibility to read and abide by the information contained in the On-Campus Housing Contract Terms and Conditions</li>
+            <li>By choosing to live on-campus, I acknowledge and understand the risk of possible exposure to and illness from infectious diseases, including COVID-19. Iowa State University and DOR are not and will not be liable for any public health threat to which a student or visitor may be exposed, including but not limited to the transmission of any infectious disease such as COVID-19.</li>
+        </ul>
+        Student Signature: <input type="text" name="student_signature" required/>
+        <br>
+        Date: <input type="date" name="date" required/>
+        <input type="submit" value="Check In"/>
+    </form>
+</main>
+</body>
+</html>
